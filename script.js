@@ -8,17 +8,47 @@ inputBox.addEventListener('keydown', (event) => {
 })
 
 function addTask() {
-    if (inputBox.value === '') {
-        alert("Task cannot be empty!");
+    if ((inputBox.value).length > 30) {
+            alert("Task name is too big!");
+        }
+    
+    else {
+        
+        if (inputBox.value === '') {
+            alert("Task cannot be empty!");
+        }
+
+        else {
+            let li = document.createElement("li");
+            li.innerHTML = inputBox.value;
+            listContainer.appendChild(li);
+            let rmvBtn = document.createElement("span");
+            rmvBtn.innerHTML="\u00d7"
+            li.appendChild(rmvBtn);
+        }
+        inputBox.value = '';
+        saveData();
+    }   
+}
+
+listContainer.addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
+        saveData();
     }
 
-    else {
-        let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        listContainer.appendChild(li);
-        let rmvBtn = document.createElement("span");
-        rmvBtn.innerHTML="\u00d7"
-        li.appendChild(rmvBtn);
+    else if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        saveData();
     }
-    inputBox.value = '';
+}, false);
+
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
 }
+
+function showData() {
+    listContainer.innerHTML = localStorage.getItem("data")
+}
+
+showData();
