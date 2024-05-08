@@ -86,7 +86,7 @@ ul li::before {
 	background-image: url(./assets/icons/round.png);
 	background-size: cover;
 	background-position: center;
-	top: 12px;
+	top: 10px;
 	left:8px;
 }
 
