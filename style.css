@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', 'sans-serif';
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #F72585, #4361EE);
+	padding: 10px;
+}
+
+.todo-app {
+	width: 100%;
+	max-width: 540px;
+	background: white;
+	margin: 100px auto 20px;
+	padding: 40px 20px 70px;
+	border-radius: 10px;
+}
+
+.todo-app h2{
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+    font-size: 32px;
+    background: linear-gradient(10deg, #4361EE, #F72585);
+    background-clip: text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.todo-app h2 img {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	background: lightgrey;
+	padding-left: 8px;
+	margin-bottom: 25px;
+}
+
+input {
+	flex: 1;
+	border: none;
+	outline: none;
+	padding: 10px;
+	background: transparent;
+	font-size: 16px;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: linear-gradient(90deg, #4361EE, #F72585);
+	color: whitesmoke;
+	padding: 16px 30px;
+	border-radius: 20px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#list-container {
+	display: flex;
+	list-style-type: none;
+
+}
