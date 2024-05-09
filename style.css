@@ -115,6 +115,10 @@ ul li span {
 	text-align: center;
 }
 
+#cross {
+	-webkit-text-fill-color: #555;
+}
+
 ul li span:hover {
 	background-color: lightgrey;
 }

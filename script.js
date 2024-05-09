@@ -8,7 +8,7 @@ inputBox.addEventListener('keydown', (event) => {
 })
 
 function addTask() {
-    if ((inputBox.value).length > 30) {
+    if ((inputBox.value).length > 70) {
             alert("Task name is too big!");
         }
     
@@ -23,6 +23,7 @@ function addTask() {
             li.innerHTML = inputBox.value;
             listContainer.appendChild(li);
             let rmvBtn = document.createElement("span");
+            rmvBtn.setAttribute("id", "cross");
             rmvBtn.innerHTML="\u00d7"
             li.appendChild(rmvBtn);
         }
