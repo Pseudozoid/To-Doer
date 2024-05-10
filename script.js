@@ -22,10 +22,16 @@ function addTask() {
             let li = document.createElement("li");
             li.innerHTML = inputBox.value;
             listContainer.appendChild(li);
+
             let rmvBtn = document.createElement("span");
             rmvBtn.setAttribute("id", "cross");
             rmvBtn.innerHTML="\u00d7"
             li.appendChild(rmvBtn);
+
+            let editBtn = document.createElement("div");
+            editBtn.setAttribute("id", "editicon");
+            editBtn.innerHTML="\u270e"
+            li.appendChild(editBtn);
         }
         inputBox.value = '';
         saveData();

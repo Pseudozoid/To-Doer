@@ -94,7 +94,6 @@ ul li.checked {
 	background: linear-gradient(1deg, #4361EE, #F72585);
     background-clip: text;
 	-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 	text-decoration: line-through;
 }
 
@@ -121,4 +120,19 @@ ul li span {
 
 ul li span:hover {
 	background-color: lightgrey;
+}
+
+#editicon {
+	display: none;
+	margin-left: 8px;
+	font-size: 16px;
+}
+
+ul li:hover #editicon{
+	display: inline-block;
+	text-align: center;
+}
+
+#editicon:hover {
+	color: #7751d1;	
 }
