@@ -1,6 +1,8 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
+inputBox.focus();
+
 inputBox.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         addTask();
@@ -22,7 +24,7 @@ function addTask() {
             let li = document.createElement("li");
             li.innerHTML = inputBox.value;
             listContainer.appendChild(li);
-
+            
             let rmvBtn = document.createElement("span");
             rmvBtn.setAttribute("id", "cross");
             rmvBtn.innerHTML="\u00d7"
@@ -46,6 +48,15 @@ listContainer.addEventListener("click", function(e) {
 
     else if (e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
+        saveData();
+    }
+
+    else if (e.target.tagName === "DIV") {
+        let selectedTask = (e.target.parentElement.innerHTML);
+        selectedTask = selectedTask.substring(0, selectedTask.indexOf('<'));
+        e.target.parentElement.remove();
+        inputBox.value = selectedTask;
+        inputBox.focus();
         saveData();
     }
 }, false);

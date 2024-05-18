@@ -126,6 +126,7 @@ ul li span:hover {
 	display: none;
 	margin-left: 8px;
 	font-size: 16px;
+	position: absolute;
 }
 
 ul li:hover #editicon{
@@ -135,4 +136,8 @@ ul li:hover #editicon{
 
 #editicon:hover {
 	color: #7751d1;	
+}
+
+ul li.checked #editicon {
+    display: none;
 }
