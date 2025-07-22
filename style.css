@@ -3,6 +3,7 @@
 	padding: 0;
 	font-family: 'Poppins', 'sans-serif';
 	box-sizing: border-box;
+	overflow: hidden; / *added for block full page scrolling : by its-spectra*/
 }
 
 .container {
@@ -67,6 +68,12 @@ button {
 	border-bottom-left-radius: 0px;
 	font-size: 16px;
 	cursor: pointer;
+}
+
+ul {
+  max-height: 300px; /* or any height you want */
+  overflow-y: auto;  /* shows scrollbar only when needed */
+	/*by: its-spectra*/
 }
 
 ul li {
